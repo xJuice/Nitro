@@ -87,13 +87,307 @@
     }
 }
 
-.toolbar-icon-animation {
+
+.new-toolbar {
+    width: 100%;
+    background: rgba(46,46,44,.9411764705882353);
+    bottom: -1px;
     position: absolute;
-    object-fit: cover;
-    height: auto;
-    width: auto;
-    max-width: 120px;
-    max-height: 150px;
-    z-index: 500;
-    filter: drop-shadow(2px 1px 0 rgba($white, 1)) drop-shadow(-2px 1px 0 rgba($white, 1)) drop-shadow(0 -2px 0 rgba($white, 1));
+    margin: 0 auto;
+    box-shadow: inset 0 2px 0 0 rgba(83,82,79,.9686274509803922);
+    border-top: 1px solid rgba(0,0,0,.9411764705882353);
+    border-bottom: 1px solid rgba(83,82,79,.9411764705882353);
+    
+    .left-side-minimize {
+        top: 4px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+    }      
+
+	.left-side {
+		float: left;
+		width: 395px;
+		height: 50px;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.hotelview-icon {
+		margin: 10px 0 10px 13px;
+	}
+	
+	.navigator-icon {
+		margin: 10px 0 10px 17px;
+	}
+	
+	.catalog-icon {
+		margin: 6px 0 10px 13px;
+	}
+	
+	.inventory-icon {
+		margin: 4px 0 10px 15px;
+	}
+	
+	.camera-icon {
+		margin: 3px 0 10px 13px;
+	}
+	
+	.homeroom-icon {
+		margin: 10px 0 10px 5px;
+	}
+	
+	.icon-left {
+		filter: drop-shadow(1.5px 1px 0);
+		color: rgba(0,0,0,.4392156862745098);
+		float: left;
+		cursor: pointer;
+	}
+	
+	.icon-left:hover {
+		filter: drop-shadow(2.5px 2px 0);
+		color: rgba(0,0,0,.5098039215686274)
+	}
+	
+	.icon-left:active {
+		opacity: .7;
+	}
+	
+	.bar-avatar {
+		width: 50px;
+		height: 47px;
+		overflow: hidden;
+	}
+	
+	.habbo-avatar {
+		float: left;
+		margin: -32px -15px 0 -14px;
+	}
+	
+	.hr {
+		width: 1px;
+		height: 41px;
+		float: left;
+		margin: 5px 5px 5px 13px;
+		background: #454442;
+	}
+	.friends-list {
+		float: left;
+		width: auto;
+		height: 169px;
+		overflow: auto;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		margin-top: -11px;
+		bottom: 28px;
+		position: relative;
+		z-index: 10;
+		max-width: 520px;
+	}
+	
+	@media only screen and (max-width: 1700px) {
+		.friends-list {
+			width:390px;
+		}
+	}
+	
+	@media only screen and (max-width: 950px) {
+		.friends-list {
+			width:260px;
+		}
+	}
+	
+	@media only screen and (max-width: 800px) {
+		.friends-list {
+			width:130px;
+		}
+	}
+	
+	@media only screen and (max-width: 670px) {
+		.friends-list-box {
+			display:none;
+		}
+	}
+	.friends-list-box {
+		width: auto;
+		height: 64px;
+		float: right;
+		top: 7px;
+		bottom: 0;
+		position: relative;
+	}
+	.fl-content {
+		width: -webkit-max-content;
+		width: max-content;
+		height: 75px;
+		position: relative;
+		bottom: -40px;
+	}
+	
+	.add-avatar-head {
+		position: relative;
+		left: 2px;
+		float: left;
+		top: -5px;
+	}
+	
+	.add-friends-box {
+		width: 127px;
+		height: 36px;
+		float: left;
+		border: solid #000;
+		border-width: 1px 1px 2px;
+		border-radius: 5px;
+		box-shadow: inset 0 0 0 2px #7ec7dd;
+		box-sizing: border-box;
+		background: #5c8f9c;
+		cursor: pointer;
+		position: relative;
+		margin-left: 3px;
+	}
+	
+	.add-friends-box:hover {
+		background: #549daf;
+		box-shadow: inset 0 0 0 2px #73daf9;
+	}
+	
+	.bottombar-user-options {
+		float: left;
+		position: relative;
+		width: 125px;
+		height: 30px;
+		margin-top: -21px;
+	}
+	
+	
+	.right-side {
+		float: right;
+		height: 64px;
+		position: absolute;
+		right: 0;
+		z-index: 2;
+	}
+	
+	.right-side-minimize {
+		top: 4px;
+		float: right;
+		cursor: pointer;
+		position: relative;
+		width: 13px;
+		height: 43px;
+	}
+	
+	.icon-bar-right {
+		filter: drop-shadow(1.5px 1px 0);
+		color: rgba(0,0,0,.4392156862745098);
+		float: right;
+		cursor: pointer;
+	}
+	
+	.icon-bar-right:hover {
+		filter: drop-shadow(2.5px 2px 0);
+		color: rgba(0,0,0,.5098039215686274);
+	}
+	
+	.icon-bar-right:active {
+		opacity: .7;
+	}
+	
+	.message-icon {
+		margin: 9px 10px 9px 0;
+	}
+	
+	.friendsearch-icon {
+		margin: 8px 10px 9px 0;
+	}
+	
+	.icon-bar-right.friendall-icon {
+		margin: 8px 11px 9px 0;
+	}
+	
+	#avatar_menu {
+		width: auto;
+		height: 50px;
+		position: absolute;
+		background: #2a2823;
+		z-index: 10;
+		bottom: 45px;
+		left: 145px;
+		box-sizing: border-box;
+		border: solid #000;
+		border-width: 1px 1px 2px;
+		border-radius: 6px;
+		box-shadow: inset 0 0 0 2px #3a3832;
+		padding-right: 10px;
+		z-index: 111;
+	}
+	
+	.amenu-ico {
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: left;
+		top: -2px;
+		position: relative;
+		margin: 0 0 0 10px;
+		cursor: pointer;
+		filter: grayscale(5);
+	}
+	
+	.amenu-text {
+		float: left;
+		font-size: 9.9px;
+		bottom: -9px;
+		position: absolute;
+		height: 14px;
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	.amenu-ico:hover {
+		filter: grayscale(0);
+		color: #20cef3;
+	}
+	
+	.memenu-notification {
+		position: absolute;
+		width: auto;
+		height: 17px;
+		background: #ac1d19;
+		top: 0;
+		right: -3px;
+		padding-left: 3px;
+		padding-right: 4px;
+		box-shadow: inset 0 0 0 1px #ed2823;
+		border: solid #000;
+		border-width: 1px 1px 2px;
+		border-radius: 5px;
+	}
+	.count-txt {
+		color: #fff;
+		font-size: 12px;
+		font-family: Ubuntu;
+		margin-top: -2px;
+	}
+	.onfriends-username {
+		position: absolute;
+		float: left;
+		font-size: 12px;
+		font-weight: 500;
+		padding: 0 3px 0 35px;
+		width: auto;
+		height: 31px;
+		display: flex;
+		overflow: hidden;
+		font-family: Ubuntu;
+		font-weight: 700;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 13px;
+		letter-spacing: 0.5px;
+	}
 }

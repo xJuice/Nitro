@@ -1,4 +1,5 @@
-<div class="nitro-toolbar-component" [@inOutAnimation]>
+<!--
+    <div class="nitro-toolbar-component" [@inOutAnimation]>
     <div class="card p-0 overflow-hidden">
         <ul #navigationList class="list-group list-group-horizontal p-1">
             <li class="list-group-item" *ngIf="isInRoom" (click)="clickIcon('hotel_view')"><i class="icon icon-hotelview icon-nitro-light"></i></li>
@@ -14,4 +15,56 @@
         </ul>
     </div>
     <nitro-toolbar-me-menu-component></nitro-toolbar-me-menu-component>
+</div>
+-->
+
+<div class="new-toolbar">
+    <nitro-toolbar-me-menu-component><!----></nitro-toolbar-me-menu-component>
+    
+    <div class="left-side">
+        <div class="left-side-minimize"><i class="icon icon-left-minimize"></i></div>
+   
+        <div class="icon-left hotelview-icon" *ngIf="isInRoom"><i class="icon icon-habbo" (click)="clickIcon('hotel_view')"></i></div>
+        <div class="icon-left homeroom-icon"  *ngIf="!isInRoom"><i class="icon icon-house" (click)="clickIcon('home_room')"></i></div>
+
+        <div class="icon-left navigator-icon "><i class="icon icon-rooms" (click)="clickIcon('navigator')"></i></div>
+        <div class="icon-left catalog-icon "><i class="icon icon-catalog" (click)="clickIcon('catalog')"></i></div>
+        <div class="icon-left inventory-icon "><i class="icon icon-inventory" (click)="clickIcon('inventory')"></i></div>
+        <div class="icon-left bar-avatar">
+            <div class="habbo-avatar" nitro-avatar-image [figure]="figure" [headOnly]="true" [direction]="2" (click)="clickIcon('me_menu')"></div>
+            <div class="memenu-notification count" *ngIf="unseenAchievementsCount" style="top: 4px; right: 0px;">
+                <p class="count-txt">{{ unseenAchievementsCount }}</p>
+            </div>
+        </div>
+        <div class="icon-left camera-icon"><i class="icon icon-camera"></i></div>
+        <div class="hr"></div>
+    </div>
+
+    <div class="right-side">
+        <div class="right-side-minimize"><i class="icon icon-right-minimize"></i></div>
+        <div class="friends-list-box">
+            <div class="friends-left-box "></div>
+            <div class="friends-list">
+                <div class="fl-content">
+                    <!---->
+                    <div class="add-friends-box ">
+                        <i class="icon icon-friendhead add-avatar-head"></i>
+                        <p class="onfriends-username ">{{ 'friend.bar.find.title' | translate }}</p>
+                    </div>
+                    <div class="add-friends-box ">
+                        <i class="icon icon-friendhead add-avatar-head"></i>
+                        <p class="onfriends-username ">{{ 'friend.bar.find.title' | translate }}</p>
+                    </div>
+                    <div class="add-friends-box ">
+                        <i class="icon icon-friendhead add-avatar-head"></i>
+                        <p class="onfriends-username ">{{ 'friend.bar.find.title' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="friends-right-box "></div>
+        </div>
+        <div class="icon-bar-right message-icon "><i class="icon icon-message"></i></div>
+        <div class="icon-bar-right friendsearch-icon "><i class="icon icon-friendsearch"></i></div>
+        <div class="icon-bar-right friendall-icon "> <i class="icon icon-friendall"></i></div>
+    </div>
 </div>

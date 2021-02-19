@@ -62,6 +62,23 @@ i {
             width: 29px;
         }
 
+        &.icon.icon-friendhead {
+            background-image: url('^assets/images/toolbar/icons/friend_head.png');
+            width: 31px;
+            height: 34px;
+        }
+        &.icon-left-minimize {
+            background-image: url('^assets/images/toolbar/icons/left-minimize.png');
+            width: 14px;
+            height: 43px;
+        }
+
+        &.icon-right-minimize {
+            background-image: url('^assets/images/toolbar/icons/right-minimize.png');
+            width: 14px;
+            height: 43px;
+        }
+
         &.icon-sendmessage {
             background-image: url('^assets/images/toolbar/icons/sendmessage.png');
             width: 20px;
@@ -112,7 +129,7 @@ i {
 
         &.icon-message {
             background-image: url('^assets/images/toolbar/icons/message.png');
-            width: 36px;
+            width: 26px;
             height: 32px;
 
             &.is-unseen {
