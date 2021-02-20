@@ -1,4 +1,4 @@
-<div *ngIf="isVisible" [@inOutAnimation] class="card bg-secondary nitro-toolbar-me-menu">
+<!--<div *ngIf="isVisible" [@inOutAnimation] class="card bg-secondary nitro-toolbar-me-menu">
     <ul class="list-group list-group-horizontal p-1">
         <li class="d-flex flex-column list-group-item" (click)="toggleAvatarEditor()">
             <i class="icon icon-me-clothing d-block"></i>
@@ -13,4 +13,11 @@
             <span>{{ 'widget.memenu.myrooms' | translate }}</span>
         </li>
     </ul>
+</div>-->
+
+<div *ngIf="isVisible" class="avatar_menu">
+    <div class="amenu-ico" (click)="toggleAchievements()"><i class="icon icon-me-achievements d-block"></i><!--<div class="mobicountbox count  ng-star-inserted" style="top: 5px;"><div class="count-txt ">1</div></div>--><div class="amenu-text ">{{ 'widget.memenu.achievements' | translate }}</div></div>
+    <div class="amenu-ico"   (click)="toggleMyProfile()"><i class="icon icon-me-profile d-block"></i><div class="amenu-text ">{{ 'widget.memenu.profile' | translate }}</div></div>
+    <div class="amenu-ico" (click)="toggleNavigator()"><i class="icon icon-me-rooms d-block"></i><div class="amenu-text ">{{ 'widget.memenu.myrooms' | translate }}</div></div>
+    <div class="amenu-ico " (click)="toggleAvatarEditor()"><i class="icon icon-me-clothing d-block"></i><div class="amenu-text ">{{ 'widget.memenu.editavatar' | translate }}</div></div>
 </div>
