@@ -14,14 +14,13 @@ import { RoomWidgetChatTypingMessage } from '../messages/RoomWidgetChatTypingMes
 @Component({
     selector: 'nitro-room-chatinput-component',
     template: `
-    <div class="nitro-room-chatinput-component">
-        <div class="chatinput-container">
-            <div class="input-sizer">
-                <input #chatInputView type="text" class="chat-input" placeholder="{{ 'widgets.chatinput.default' | translate }}" (input)="chatInputView.parentElement.dataset.value = chatInputView.value" [disabled]="floodBlocked" [maxLength]="inputMaxLength" />
+    <div class="new-chat-input-box">
+            <div class="bar-chat">
+                <input #chatInputView type="text" class="chat-box" placeholder="{{ 'widgets.chatinput.default' | translate }}" (input)="chatInputView.parentElement.dataset.value = chatInputView.value" [disabled]="floodBlocked" [maxLength]="inputMaxLength" />
             </div>
-        </div>
-        <nitro-room-chatinput-styleselector-component (styleSelected)="onStyleSelected($event)"></nitro-room-chatinput-styleselector-component>
-    </div>`
+            <nitro-room-chatinput-styleselector-component (styleSelected)="onStyleSelected($event)"></nitro-room-chatinput-styleselector-component>
+            </div>
+    `
 })
 export class RoomChatInputComponent extends ConversionTrackingWidget implements OnInit, OnDestroy, AfterViewInit
 {

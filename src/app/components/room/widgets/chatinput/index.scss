@@ -1,3 +1,41 @@
+.new-chat-input-box {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 6px;
+
+	.bar-chat {
+		background: url('^assets/images/chat/chat-box.png');
+		width: 451px;
+		height: 38px;
+		position: absolute;
+		margin: auto;
+		bottom: 0;
+		z-index: 5;
+	}
+	.chat-box {
+		outline: 0;
+		color: #000;
+		border: 0 solid transparent;
+		margin: 2px 2px 2px 60px;
+		width: 385px;
+		height: 34px;
+		background: hsla(0,0%,100%,0);
+		font-size: 15px;
+		padding-top: 1px;
+		font-family: Ubuntu;
+	}
+}
+
+@media only screen and (max-width: 1700px) {
+  .new-chat-input-box {
+    bottom: 56px;
+  }	
+}
+
+
 .nitro-room-chatinput-component {
     position: fixed;
     display: flex;
@@ -5,6 +43,10 @@
     left: 375px;
     pointer-events: none;
     z-index: $chatinput-zindex;
+
+
+
+   
 
     .chatinput-container {
         position: relative;

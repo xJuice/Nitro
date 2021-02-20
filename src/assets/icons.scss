@@ -325,6 +325,14 @@ i {
             height: 19px;
         }
 
+
+        &.chatstylesnew-icon {
+            background-image: url('^assets/images/chat/bubble-select.png');
+            width: 57px;
+            height: 38px;
+            z-index: 6;
+        }
+
         &.pencil-icon {
             background-image: url('^assets/images/infostand/pencil-icon.png');
             width: 17px;
