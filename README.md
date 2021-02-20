@@ -12,8 +12,8 @@ This repository will get updates from the original Repo.
 **Todo Redesign Components:**</br>
 ~~Toolbar~~             
 Purse                      
-Chatinput                  
-Chatbubbleselector                 
+~~Chatinput~~                  
+~~Chatbubbleselector~~                 
 Catalog                    
 Navigator                  
 Inventory                  
