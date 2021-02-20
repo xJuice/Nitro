@@ -11,6 +11,7 @@ This repository will get updates from the original Repo<br>
 
 **Todo Redesign Components:**<br>
 ~~Toolbar~~             
+~~Me-Menu Toolbar~~             
 ~~Purse~~                      
 ~~Chatinput~~                  
 ~~Chatstyle Selector~~                 
