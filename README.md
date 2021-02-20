@@ -1,7 +1,26 @@
 ![](https://svgshare.com/i/TAX.svg)
+# Nitro HTML5 Client (r63b Flash-UI Edit)
 
 
-# Nitro HTML5 Client
-### This is the official repository for The Nitro HTML5 Client.
+## This is not the official repository for The Nitro HTML5 Client.
+This repository will get updates from the original Repo.
 
-### [Click Here To Get Started](https://git.krews.org/nitro/nitro-client/-/wikis/home)
+**Usefull Links:**</br>
+ [Official Repo](https://git.krews.org/nitro/nitro-client)</br>
+ [Tutorials](https://git.krews.org/nitro/nitro-client/-/wikis/home)</br>
+
+**Todo Redesign Components:**</br>
+~~Toolbar~~             
+Purse                      
+Chatinput                  
+Chatbubbleselector                 
+Catalog                    
+Navigator                  
+Inventory                  
+Messenger                  
+Confirmationdialogs        
+Alerts                     
+Infostand                 
+Profile                    
+Roomsettings               
+Roomcreator                
