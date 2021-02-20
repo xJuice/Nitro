@@ -1,4 +1,4 @@
-<div class="nitro-purse-component float-right">
+<!--<div class="nitro-purse-component float-right">
     <div class="position-relative mb-1">
         <div class="row px-0 mx-0">
             <ng-container *ngFor="let currency of currencies | keyvalue">
@@ -20,5 +20,47 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>-->
+
+
+<div class="nitro-purse-component float-right">
+    <ng-container *ngFor="let currency of currencies | keyvalue">
+        <div class="r63b-old-pursebox" *ngIf="isVisible(currency.key)">
+            <div class="cpurse-name" [ngClass]="{ 'ducketscolor' : currency.key == 0, 'creditscolor': currency.key == -1, 'diamondscolor': currency.key == 5 }">
+                <div *ngIf="currency.key == -1">
+                    {{ 'purse_coins' | translate }}
+                </div>
+                <div *ngIf="currency.key == 5">
+                    {{ 'achievements.activitypoint.5' | translate }}
+                </div>
+                <div *ngIf="currency.key == 0">
+                    {{ 'achievements.activitypoint.0' | translate }}
+                </div>
+                <div *ngIf="currency.key == 101">
+                    {{ 'purse.seasonal.currency' | translate }}
+                </div>
+             </div>
+            <div class="purseicon-detail" [ngClass]="{ 'pi-ducketscolor' : currency.key == 0, 'pi-creditscolor': currency.key == -1, 'pi-diamondscolor': currency.key == 5 }">
+                <div class="currency-icon" nitro-currency-icon [type]="currency.key"></div>
+            </div>      
+            <div class="cpurse-balance">{{ currency.value | shortNumber }}</div>
+        </div>
+    </ng-container>
+    
+    <div class="r63b-old-pursebox">
+        <div class="cpurse-name hccolor">{{ 'catalog.club.hc' | translate }}</div>
+        <div class="purseicon-detail pi-hccolor">
+        <div class="currency-icon" nitro-currency-icon [type]="'hc'"></div>
+        </div>
+        <div class="cpurse-balance">{{ hcDay }}</div>
+    </div>
+
+    <div class="r63b-old-pursebox">
+        <div class="cb-help-button">
+            <div class="cb-button-text"> {{ 'toolbar.help' | translate }}</div>
+        </div>
+        <div class="cb-exit-button"><i class="icon purse-logout cb-button-ico"></i></div>
+        <div class="cb-settings-button"><i class="icon purse-help cb-button-ico"></i></div>
     </div>
 </div>

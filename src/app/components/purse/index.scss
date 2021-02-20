@@ -2,6 +2,155 @@
     width: 200px;
     pointer-events: none;
 
+   
+    .r63b-old-pursebox {
+        position: relative;
+        width: 192px;
+        height: 28px;
+        background: rgba(46,46,44,.8784313725490196);
+        box-shadow: inset 0 0 0 2px hsl(0deg 0% 100% / 20%);
+        padding-top: 3px;
+        border-radius: 6px;
+        border: 1px solid #000;
+        margin-bottom: 3px;
+        z-index: 300;
+        pointer-events: auto;
+    
+    
+    
+    }
+    .purseicon-detail {
+        width: 30px;
+        height: 28px;
+        position: relative;
+        background: rgba(46,46,44,.8784313725490196);
+        right: -1px;
+        top: -4px;
+        box-shadow: inset 0 0 0 2px hsl(0deg 0% 100% / 20%);
+        border-radius: 6px;
+        border: 1px solid #000;
+        display: flex;
+        float: right;
+    }
+    
+    .cpurse-name {
+        float: left;
+        font-family: Ubuntu;
+        font-size: 12px;
+        padding: .5px 7px;
+        font-weight: bolder;
+        -webkit-user-select: none;
+        user-select: none;
+        left: 0;
+        position: relative;
+    }
+    .cpurse-balance {
+        float: right;
+        font-family: Ubuntu;
+        font-size: 12px;
+        padding: .5px 7px;
+        -webkit-user-select: none;
+        user-select: none;
+        left: 0;
+        position: relative;
+        flex: auto;
+        display: flex;
+        font-weight: bold;
+    }
+    .currency-icon {
+        width: 30px;
+        height: 25.5px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+    
+    .creditscolor {
+        color: #f1bb24;
+    }
+    .pi-creditscolor {
+        background: #a47d15;
+        box-shadow: inset 0 0 0 2px #e2ae1d;
+    }
+    
+    .pi-ducketscolor {
+        background: #9f6194;
+        box-shadow: inset 0 0 0 2px #da86d1;
+    }
+    .ducketscolor {
+        color: #d071ce;
+    }
+    .pi-diamondscolor {
+        background: #5a8689;
+        box-shadow: inset 0 0 0 2px #7cbac2;
+    }
+    .pi-hccolor {
+        background: #a6722d;
+        box-shadow: inset 0 0 0 2px #bf8a42;
+    }
+    .diamondscolor {
+        color: #7cbac2;
+    }
+    .hccolor {
+        color: #bd802e;
+    }
+    .cb-help-button {
+        width: 59.5px;
+        height: 18px;
+        background: linear-gradient(180deg,#207ab4 10%,#207ab4 0 40%,#207ab4 40% 60%,#207ab4 90% 80%,#126296 0);
+        box-shadow: inset 0 0 0 1px #000;
+        border-radius: 4px;
+        float: left;
+        margin-left: 4px;
+        margin-top: 1px;
+        cursor: pointer;
+    }
+    .cb-help-button:hover {
+        box-shadow: inset 0 0 0 2px #000
+    }
+    .cb-button-text {
+        font-size: 11px;
+        text-align: center;
+        font-family: Ubuntu;
+        padding-top: 1px;
+    }
+    .cb-exit-button {
+        width: 59.5px;
+        height: 18px;
+        background: linear-gradient(180deg,#f16a5e 10%,#dd5246 0 40%,#dd5246 40% 60%,#dd5246 90% 80%,#962f26 0);
+        box-shadow: inset 0 0 0 1px #000;
+        border-radius: 4px;
+        float: left;
+        margin-left: 2px;
+        margin-top: 1px;
+        padding: 0;
+        cursor: pointer;
+    }
+    .cb-exit-button:hover {
+        box-shadow: inset 0 0 0 2px #000
+    }
+    .cb-settings-button {
+        width: 59.5px;
+        height: 18px;
+        background: linear-gradient(180deg,#888493 10%,#716a85 0 40%,#716a85 40% 60%,#716a85 90% 80%,#655e7b 0);
+        box-shadow: inset 0 0 0 1px #000;
+        border-radius: 4px;
+        top: 4px;
+        float: left;
+        margin-left: 1.5px;
+        margin-top: 1px;
+        padding: 0;
+        cursor: pointer;
+    }
+    .cb-settings-button:hover {
+        box-shadow: inset 0 0 0 2px #000
+    }
+    .cb-button-ico {
+        margin: -11px 23px 0 24px;
+    }
+   
+   
+   
+   
     .item-detail {
         flex:46%;
         margin-bottom: 3px;

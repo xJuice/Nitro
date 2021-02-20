@@ -84,6 +84,19 @@ i {
             width: 20px;
             height: 21px;
         }
+        
+        &.purse-logout {
+            background-image: url('^assets/images/wallet/cb-exit.png');
+            width: 13px;
+            height: 21px;
+        }
+
+        
+        &.purse-help {
+            background-image: url('^assets/images/wallet/cb-settings.png');
+            width: 12px;
+            height: 21px;
+        }
 
         &.icon-me-profile {
             background-image: url('^assets/images/toolbar/icons/me-menu/profile.png');
