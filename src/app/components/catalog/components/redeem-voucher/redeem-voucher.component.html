@@ -1,8 +1,17 @@
-<div class="d-flex flex-column justify-content-center">
+<!--<div class="d-flex flex-column justify-content-center">
     <div class="input-group">
         <input type="text" [(ngModel)]="voucherCode" placeholder="{{ localization.texts[1] }}" class="form-control form-control-sm">
         <div class="input-group-append">
             <button type="button" class="btn btn-primary btn-sm" (click)="redeem()">{{ ('redeem') | translate }}</button>
         </div>
     </div>
-</div>
+</div>-->
+
+<div class="voucher_layout">
+    <div class="title">{{ ('catalog.voucher_title') | translate }}:</div>
+    <input type="text"  class="voucher ng-untouched ng-pristine ng-valid" [(ngModel)]="voucherCode" placeholder="{{ localization.texts[1] }}">
+    <div class="redeem-box" (click)="redeem()">
+        <div class="redeem-button-text">{{ ('redeem') | translate }}
+
+        </div>
+    </div>

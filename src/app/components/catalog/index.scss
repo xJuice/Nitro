@@ -1,3 +1,4 @@
+/* unused scoll down to r63b-catalog */
 .nitro-catalog {
     position: absolute;
     width: 600px;
@@ -134,6 +135,9 @@
     }
 }
 
+
+/* Above is unused scroll down to r63b-catalog */
+
 .nitro-catalog-confirm-purchase-component {
     position: absolute;
     width: 300px;
@@ -210,6 +214,866 @@
 .nitro-catalog-customize-gift-component {
     position: absolute;
     width: 450px;
+
+
+}
+
+
+/* r63b catalog stylesheets */
+
+.r63b-catalog {
+    width: 570px;
+    height: 635px;
+    background-color: #ebe9df;
+    left: 250px;
+    top: 100px;
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #000;
+    box-sizing: initial;
+
+    /* header */
+    .headerctlg {
+        width: 99.3%;
+        height: 31px;
+        background-color: #367897;
+        border-top: 2px solid #408caf;
+        border-left: 2px solid #408caf;
+        border-right: 2px solid #408caf;
+        border-radius: 6px 6px 0 0;
+        cursor: pointer;
+        box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.3803921568627451);
+        box-sizing: initial;
+    
+            .titlectlg {
+                margin: 0;
+                width: 558px;
+                position: absolute;
+                text-align: center;
+                font-size: 13px;
+                color: #fff;
+                font-weight: 600;
+                padding: 4px;
+                box-sizing: initial;
+                font-family: system-ui;
+            }
+            .closectlg {
+                width: 19px;
+                height: 20px;
+                background-image: url(^assets/images/new-close.png);
+                position: relative;
+                float: right;
+                margin: 4px;
+            }
+            .closectlg:hover {
+                background-image: url(^assets/images/new-close-hover.png);
+            }
+    }       
+
+    /* body part */
+    .body {
+        width: 570px;
+        height: 602px;
+            
+        /* menu part */
+        .menu {
+            width: 550px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0 10px;
+            box-sizing: initial;
+            z-index: 1111;
+            position: relative;
+
+                .menu-button {
+                    width: 100%;
+                    height: 22px;
+                    background: #cac9c1;
+                    float: left;
+                    margin-right: 0;
+                    margin-top: 4px;
+                    border-radius: 6px 6px 0 0;
+                    padding: 7px 5px 1px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    border: 1px solid #504f4e;
+                    border-bottom-color: #85847c;
+                    text-align: center;
+                    box-sizing: initial;
+                    font-family: system-ui;
+                }
+                .menu-button:hover {
+                    background: #f6f5f0;
+                    box-shadow: inset -2px 0 0 0 #fff, inset 0 2px 0 0 #fff, inset 2px 0 0 0 #fff;
+                    border-bottom: 1px solid #f6f5f0;
+                }
+            
+                .menu-button-active {
+                    background: #ebe9df!important;
+                    border: 2px solid #000!important;
+                    border-bottom: 1px solid #ebe9df!important;
+                    border-image: initial!important;
+                    padding: 6.5px 5px 0!important;
+                    box-shadow: inset -2px 0 0 0 #fff,inset 0 2px 0 0 #fff,inset 2px 0 0 0 #fff!important;
+                }   
+        }
+
+       
+
+        /* catalog info which show icon , caption, description and image on the top of catalog*/
+        .info {
+            width: 570px;
+            height: 90px;
+            background: #0e3f52;
+            box-shadow: inset 0 0 0 2px hsl(0deg 0% 100% / 23%);
+            overflow: hidden;
+            position: relative;
+       
+            .image, .icon {
+                background-repeat: no-repeat;
+                background-position: 50%;
+                height: 90px;
+                transform: scale(2);
+            }
+
+            .image {
+                opacity: .1;
+                position: absolute;
+                width: 570px;
+                filter: grayscale(1);
+            }
+            .icon {
+                float: left;
+                width: 85px;
+                filter: drop-shadow(2px 1px 0 #0000003d);
+            }
+            .caption {
+                position: relative;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                padding-top: 9px;
+                padding-left: 80px;
+                text-shadow: 1px 1px 0 rgb(0 0 0 / 24%);
+                font-family: Ubuntu;
+            }
+            .text {
+                position: relative;
+                line-height: 14px;
+                color: #fff;
+                font-size: 12.3px;
+                width: 560px;
+                padding-left: 85px;
+                font-family: Ubuntu;
+                height: 42px;
+                overflow: hidden;
+                margin-top: -55px;
+                float: left;
+            }
+
+        }
+        
+        /* right element from the catalog it handles all layouts components like frontpage4, default 3x3 , spaces, trophy etc. */
+        .rightside {
+            width: 360px;
+            height: 460px;
+            float: right;
+            margin: 6px 7px 0 0;
+        
+            
+            /* frontpage4 layout */
+            .frontpage4_layout {
+                position: absolute;
+                float: left;
+                width: 570px;
+                height: 476px;
+                left: 10px;
+               
+                .left-box {
+                    width: 184px;
+                    height: 460px;
+                    float: left;
+                    margin-right: 10px;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    position: relative;
+                    cursor: pointer;
+                }
+                .right-box {
+                    width: 356px;
+                    height: 126px;
+                    background: #b7b6ae;
+                    float: left;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    cursor: pointer;
+                    position: relative;
+                    margin-bottom: 8px;
+                }
+                
+                .smallbox-text {
+                    width: 336px;
+                    padding: 6px;
+                    background: rgba(0,0,0,.48823529411764707);
+                    box-sizing: initial;
+                    font-family: system-ui
+                }
+                .bigbox-text, .smallbox-text {
+                    position: absolute;
+                    bottom: 0;
+                    margin: 4px;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-shadow: 1px 1px 2px hsl(0deg 0% 100% / 26%);
+                    line-height: 18px;
+                    font-family: system-ui
+                }
+                .bigbox-text {
+                    width: 166px;
+                    padding: 3px 5px 5px;
+                    background: rgba(0,0,0,.48823529411764707);
+                }
+
+                /* voucher layout for frontpage 4 */
+                .voucher_layout {
+                    background: #50baed;
+                    width: 345px;
+                    height: 61px;
+                    float: left;
+                    margin: 5.5px;
+                    border-radius: 8px;
+                    font-family: system-ui;
+                    box-sizing: initial;
+                    margin-top: -2px;
+
+                    .title {
+                        padding: 4px 15px;
+                        font-size: 14px;
+                        word-spacing: -.5px;
+                        width: auto;
+                        float: left;
+                    }
+                    .voucher {
+                        width: 214px;
+                        height: 23px;
+                        border: 1px solid #204a5f;
+                        border-radius: 6px;
+                        margin-left: 15px;
+                        float: left;
+                        outline: 0;
+                        padding-left: 5px;
+                        font-size: 12px;
+                        padding-top: 0;
+                    }
+                    .redeem-box {
+                        background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+                        box-shadow: inset 0 0 0 2px #d9d9d9;
+                        height: 20px;
+                        float: right;
+                        position: relative;
+                        width: auto;
+                        border: solid #000;
+                        border-width: 1px 1px 2px;
+                        border-radius: 4px;
+                        right: 7px;
+                        cursor: pointer;
+                        box-sizing: initial;
+                        font-family: system-ui;
+                    }
+                    .redeem-button-text {
+                        font-size: 13px;
+                        padding: 0 7px;
+                    }
+                    .redeem-box:hover {
+                        background: linear-gradient(#fff 50%,#eee 0);
+                        box-shadow: inset 0 0 0 2px #eee;
+                    }
+                }
+            }
+
+            /* default_3x3 layout */
+            .default_3x3_layout {
+
+                .display-box {
+                    width: 360px;
+                    height: 240px;
+                    background: #000;
+                    overflow: hidden;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    transition: .5s;
+                    position: relative;
+                }
+                .furni-name {
+                    position: absolute;
+                    color: #fff;
+                    z-index: 1111;
+                    left: 0;
+                    top: 0;
+                    background: rgba(0,0,0,.058823529411764705);
+                    border-radius: 5px;
+                    padding: 4px 6px;
+                    margin: 20px 15px;
+                    font-size: 13px;
+                    font-family: Ubuntu;
+                    text-shadow: 1px 1px 0 rgb(0 0 0 / 30%);
+                }
+                .furnibox {
+                    margin: 5px 0;
+                    width: 352px;
+                    height: 147px;
+                    background-image: url(^assets/images/catalog/furni-box.png);
+                    float: left;
+                    padding: 4px;
+                    overflow: hidden;
+                    position: absolute;
+                    box-sizing: initial;
+                    
+
+                    /* r63b scrollbar works only for webkit browsers */
+                    .furnilist::-webkit-scrollbar {
+                        width: 16px;
+                        box-sizing: border-box
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png)
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button:hover {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right -16px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button:active {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right 0
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png)
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right -16px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:active {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right 0
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-thumb {
+                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -18px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-thumb,.furnilist::-webkit-scrollbar-thumb:hover {
+                        box-shadow: inset 0 0 1px 2px #fff;
+                        border-radius: 4px;
+                        border: solid #000;
+                        border-width: 1px 1px 2px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-thumb:hover {
+                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -8px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-thumb:active {
+                        border: 1px solid #000;
+                        box-shadow: inset 0 0 1px 2px #828282;
+                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right 2px;
+                        border-radius: 4px
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-track-piece {
+                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-track-piece.png) no-repeat 50%
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-corner {
+                        background: #d0cecb
+                    }
+                    
+                    .furnilist::-webkit-scrollbar-track-piece {
+                        background-color: #d9d9d9;
+                        box-shadow: inset 1px 1px 1px rgba(0,0,0,.2)
+                    }
+                    
+                    .furnilist {
+                        width: 352px;
+                        height: 95%;
+                        list-style: none;
+                        overflow: auto;
+                        position: absolute;    
+                    }
+                    /* list view it shows all furnitures */
+                    .furnilistview {
+                        width: 55px;
+                        height: 74px;
+                        float: left;
+                        position: relative;
+
+                        /* when the furni is selected */
+                        .furni-active {
+                            background: #fff;
+                            box-shadow: inset 0 0 0 2px #62c4e8;
+                            border-radius: 4px;
+                        }
+                        /* single furni */
+                        .furni {
+                            width: 53px;
+                            max-height: 74px;
+                            height: auto;
+                            float: left;
+                            padding-bottom: 6px;
+                            cursor: pointer;
+                            overflow: hidden;
+                            position: relative;
+                            margin-left: 3px;
+                        
+                            /* credits price box */
+                            .second-price-box {
+                                margin-top: 3px;
+                            }
+                             /* price box for points and credits */
+                            .first-price-box, .second-price-box {
+                                width: 49px;
+                                height: 11px;
+                            }
+
+                            .multiple-purchase-indicators {
+                                width: auto;
+                                height: 8px;
+                                max-width: 30px;
+                                padding: 2px 3px;
+                                background: #ff3200;
+                                float: right;
+                                overflow: hidden;
+                                position: relative;
+                                top: 24px;
+                                font-size: 10px;
+                                line-height: 8px;
+                                color: #cc6;
+                                border-radius: 5px;
+                                right: 5px;
+                                font-family: Arial;
+                                text-shadow: 1px 1px 0 rgb(0 0 0 / 35%);
+                                box-sizing: initial;
+                            }
+        
+                            .furni-image {
+                                width: 53px;
+                                height: 39px;
+                                background-position: 50%;
+                                background-repeat: no-repeat;
+                            }
+        
+                            .price-caption {
+                                font-size: 11px;
+                                height: 11px;
+                                line-height: 11.5px;
+                                font-weight: 700;
+                                width: 100%;
+                                position: absolute;
+                                text-align: right;
+                                text-shadow: 0 -1px 0 rgb(0 0 0 / 35%);
+                                overflow: hidden;
+                                font-family: system-ui;
+                                float: right;
+                                right: 18px;
+                            }
+        
+                            .price-icon {
+                                width: 11px;
+                                height: 11px;
+                                float: right;
+                                right: 3px;
+                                top: -6px;
+                                position: relative;
+                            }
+                        }   
+                    }
+                }
+               
+
+                /* select furni , that thing on the bottom of the layout */
+                .select_furni {
+                    position: absolute;
+                    width: 360px;
+                    height: 65px;
+                    background-image: url(^assets/images/catalog/not-selected-box.png);
+                    bottom: 8px;
+                
+                    .text {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 13px;
+                        color: #6f6f6f;
+                        font-family: system-ui;
+                        padding-top: 40px;
+                        font-weight: 700;
+                    }
+                }
+                .gift-box, .purchase-box {
+                    float: left;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                .purchase-box {
+                    margin: 5px 0;
+                    width: 360px;
+                    height: 65px;
+                    overflow: hidden;
+                    background: #ebe9df;
+                    z-index: 1;
+
+                    .giftbutton, .purchasebox {
+                        float: left;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    
+                    .purchasebox {
+                        margin: 5px 0;
+                        width: 360px;
+                        height: 65px;
+                        overflow: hidden;
+                        background: #ebe9df;
+                        z-index: 1;
+                    }
+                    .quantitybox {
+                        width: 170px;
+                        float: left;
+                        bottom: 29px;
+                        position: absolute;
+                        height: 26px;
+                    }
+                    
+                    
+                    .quantityinput {
+                        width: 30px;
+                        height: 25px;
+                        background: hsla(0,0%,100%,0);
+                        border: 0 solid rgba(93,93,90,0);
+                        float: left;
+                        background-image: url(^assets/images/catalog/quantitybox.png);
+                        outline: 0;
+                        padding-left: 4px;
+                        font-size: 12px;
+                    }
+                    
+                    .quantitytext {
+                        float: left;
+                        width: 65px;
+                        font-size: 14px;
+                        color: #727272;
+                        padding: 2px 0;
+                        font-family: system-ui;
+                    }
+                    
+                    .pricebox {
+                        width: 170px;
+                        float: right;
+                        bottom: 29px;
+                        position: absolute;
+                        right: 0px;
+                    }
+                    
+                    .pricetext {
+                        float: left;
+                        width: 65px;
+                        font-size: 14px;
+                        color: #727272;
+                        padding: 2px 0;
+                        font-family: system-ui;
+                    }
+                    
+                    .costbox {
+                        height: 26px;
+                        float: right;
+                        padding-left: 2px;
+                    }
+                    
+                    .plusprice {
+                        float: left;
+                        width: auto;
+                        height: 26px;
+                        line-height: 25px;
+                        font-weight: 1000;
+                        font-size: 14px;
+                        color: #000;
+                        letter-spacing: 2px;
+                        font-family: system-ui;
+                    }
+                    .buybutton {
+                        width: 166px;
+                        height: 20px;
+                        background: linear-gradient(#00a100 50%,#009000 0);
+                        box-shadow: inset 0 0 0 2px #009000;
+                        border-radius: 4px;
+                        border: solid #000;
+                        border-width: 2px 2px 3px;
+                        float: right;
+                        right: 0;
+                        box-sizing: initial;
+                        bottom: 0;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+                    .buybutton:hover {
+                        background: linear-gradient(#00a900 50%,#009c00 0);
+                        box-shadow: inset 0 0 0 2px #009c00;
+                    }
+                    .buybuttontext, .giftbuttontext {
+                        text-align: center;
+                        font-size: 13px;
+                    }
+                    .buybuttontext {
+                        color: #fff;
+                        font-weight: 700;
+                        font-family: system-ui;
+                    }
+                    .giftbutton {
+                        width: 168px;
+                        height: 21px;
+                        background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+                        box-shadow: inset 0 0 0 2px #d9d9d9;
+                        border-radius: 4px;
+                        border: solid #000;
+                        border-width: 1px 1px 2px;
+                        box-sizing: initial;
+                        font-family: system-ui;
+                    }
+                    .giftbutton:hover {
+                        background: linear-gradient(#fff 50%,#eee 0);
+                        box-shadow: inset 0 0 0 2px #eee;
+                    }
+                    .costsvalue {
+                        float: left;
+                        width: auto;
+                        height: 26px;
+                        line-height: 26px;
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: #000;
+                        font-family: system-ui;
+                    }
+                    .iconimage {
+                        width: 20px;
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                } 
+            }
+        }
+
+        /* leftside from the catalog it handles navigationlist and searching (it is messy i know) */
+        .leftside {
+            float: left;
+            width: 200px;
+            height: 475px;
+
+
+            .search-bgbox, .catalog-menubox {
+                float: left;
+                box-sizing: initial;
+            }
+            .search-bgbox {
+                margin: 6px 8px;
+                width: 184px;
+                height: 24px;
+                background-image: url(^assets/images/catalog/search-bgbox.png);
+                position: relative;
+            }
+            .search {
+                width: 155px;
+                padding-left: 5px;
+                border: 0 solid transparent;
+                background: hsla(0,0%,100%,0);
+                height: 21px;
+                outline: 0;
+                color: #727272;
+                font-size: 12px;
+                font-family: Arial;
+                box-sizing: initial;
+                position: absolute;
+                margin: 1px;
+            }
+            .catalog-menubox {
+                margin: 0 8px;
+                width: 176px;
+                height: 423px;
+                background-image: url(^assets/images/catalog/menu-bgbox.png);
+                padding: 5px 4px;
+            }
+            
+            .catalog-menu-list {
+                width: 177px;
+                height: 424px;
+                list-style: none;
+                overflow-x: hidden;
+                position: relative;
+                box-sizing: initial;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar {
+                width: 16px;
+                box-sizing: border-box;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png);
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button:hover {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right -16px
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button:active {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right 0;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button:single-button:vertical:increment {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png);
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right -16px;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-button:single-button:vertical:increment:active {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right 0;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-thumb {
+                background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -18px;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-thumb,.catalog-menu-list::-webkit-scrollbar-thumb:hover {
+                box-shadow: inset 0 0 1px 2px #fff;
+                border-radius: 4px;
+                border: solid #000;
+                border-width: 1px 1px 2px;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-thumb:hover {
+                background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -8px;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-thumb:active {
+                border: 1px solid #000;
+                box-shadow: inset 0 0 1px 2px #828282;
+                background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right 2px;
+                border-radius: 4px;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-track-piece {
+                background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-track-piece.png) no-repeat 50%;
+            }
+            
+            .catalog-menu-list::-webkit-scrollbar-corner {
+                background: #d0cecb;
+            }
+
+            .new-nav-listitem {
+                position: relative;
+                display: block;
+            }
+            
+            .new-nav {
+                width: 300%;
+                height: 16px;
+                background: rgba(99,197,233,0);
+                border-top: 2px solid rgba(130,209,237,0);
+                border-bottom: 2px solid rgba(130,209,237,0);
+                cursor: pointer;
+                box-shadow: 0 1px 0 0 rgb(180 180 174 / 0%);
+                margin-bottom: 1px;
+                color: #686868;
+                box-sizing: initial;
+                margin-left: -60px;
+                padding-left: 40px;
+            }
+            .new-nav:hover {
+                background: #63c5e9;
+                border-top: 2px solid #82d1ed;
+                border-bottom: 2px solid #82d1ed;
+                box-shadow: 0 1px 0 0 #b4b4ae;
+                color: #fff
+            }
+            .new-nav-pagebox {
+                width: 177px;
+                height: 20px;
+                margin-top: -2px;
+                float: left;
+                overflow: hidden;
+                position: relative;
+                box-sizing: initial;
+            }
+            .new-nav-icon {
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                float: left;
+                margin-top: -4px;
+                margin-left: 2px;
+            }
+            .new-nav-pagename {
+                float: left;
+                padding: 2px 2px 3px 28px;
+                position: absolute;
+                font-size: 12px;
+                text-shadow: 0 0 0 rgb(91 91 91 / 41%);
+                font-weight: bolder;
+                font-family: Arial;
+                width: auto;
+                overflow: hidden;
+                box-sizing: initial;
+            }
+            
+            .new-nav-active {
+                background: #63c5e9;
+                border-top: 2px solid #82d1ed;
+                border-bottom: 2px solid #82d1ed;
+                box-shadow: 0 1px 0 0 #b4b4ae;
+                color: #fff;
+            }
+        
+            .new-nav-notToggled {
+            background-image: url(^assets/images/catalog/catalog-not-toggle.png);
+            }
+
+            .new-nav-Toggled {
+            background-image: url(^assets/images/catalog/catalog-toggle.png);
+            }
+
+            .new-nav-Toggled,  .new-nav-notToggled {
+            position: absolute;
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            left: 140px;
+            z-index: 1;
+            }
+
+
+        }
+
+
+    }
 
 
 }

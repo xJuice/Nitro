@@ -11,6 +11,8 @@ import { ProductTypeEnum } from '../../../enums/ProductTypeEnum';
 })
 export class CatalogLayoutDefaultComponent extends CatalogLayout
 {
+
+  
     public static CODE: string = 'default_3x3';
 
     public selectOffer(offer: CatalogPageOfferData): void

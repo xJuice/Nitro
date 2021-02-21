@@ -1,5 +1,22 @@
-<ul class="list-group list-group-flush">
-    <ng-container *ngFor="let child of catalogPage.children">
-        <nitro-catalog-navigation-item-component *ngIf="child.visible" [catalogPage]="child"></nitro-catalog-navigation-item-component>
-    </ng-container>
-</ul>
+<style>
+
+    .error-page, .list-grouptest {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list-grouptest {
+        padding-left: 20px;
+        margin-bottom: 0;
+        border-radius: 7px;
+    }
+
+ 
+
+    </style>
+    <ul class="list-grouptest list-group-flush">
+        <ng-container *ngFor="let child of catalogPage.children">
+            <nitro-catalog-navigation-item-component *ngIf="child.visible" [catalogPage]="child"></nitro-catalog-navigation-item-component>
+        </ng-container>
+    </ul>
+    

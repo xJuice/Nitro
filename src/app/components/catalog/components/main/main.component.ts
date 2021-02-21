@@ -453,4 +453,23 @@ export class CatalogMainComponent implements OnInit, OnChanges, OnDestroy
     {
         return this._showInsufficientFunds;
     }
+
+    public get iconUrl(): string
+    {
+        if(this._catalogService != null && this._catalogService.activePageData != null) {
+            return (Nitro.instance.getConfiguration<string>('catalog.asset.icon.url').replace(/%name%/gi, this._catalogService.activePageData.icon.toString()));
+        }
+        return "";
+    }
+
+    public get headerImageUrl(): string
+    {
+        if(this.activePage !== null) {
+            let imageUrl = Nitro.instance.getConfiguration<string>('catalog.asset.image.url');
+            imageUrl = imageUrl.replace('%name%', this.activePage.localization.images[0]);
+            return imageUrl;
+        }
+
+        return "";
+    }
 }

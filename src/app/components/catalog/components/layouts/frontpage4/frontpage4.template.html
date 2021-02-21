@@ -1,4 +1,4 @@
-<div class="nitro-catalog-layout-frontpage4-component row">
+<!--<div class="nitro-catalog-layout-frontpage4-component row">
     <div class="col-4">
         <div *ngIf="activePage.frontPageItems[0]" class="front-page-item tall" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[0].itemPromoImage + ')'}">
             <div class="front-page-item-caption">{{activePage.frontPageItems[0].itemName}}</div>
@@ -15,7 +15,27 @@
             <div *ngIf="activePage.frontPageItems[3]" class="front-page-item wide mb-0" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[3].itemPromoImage + ')'}">
                 <div class="front-page-item-caption">{{activePage.frontPageItems[3].itemName}}</div>
             </div>
-        </div>
+        </div>d
         <redeem-voucher-component [localization]="activePage.localization"></redeem-voucher-component>
     </div>
-</div>
+</div>-->
+
+<div class="frontpage4_layout">
+        
+            <div *ngIf="activePage.frontPageItems[0]" class="left-box" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[0].itemPromoImage + ')'}">
+                <div class="bigbox-text">{{activePage.frontPageItems[0].itemName}}</div>
+            </div>
+        
+        
+                <div *ngIf="activePage.frontPageItems[1]" class="right-box" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[1].itemPromoImage + ')'}">
+                    <div class="smallbox-text">{{activePage.frontPageItems[1].itemName}}</div>
+                </div>
+                <div *ngIf="activePage.frontPageItems[2]" class="right-box" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[2].itemPromoImage + ')'}">
+                    <div class="smallbox-text">{{activePage.frontPageItems[2].itemName}}</div>
+                </div>
+                <div *ngIf="activePage.frontPageItems[3]" class="right-box" [ngStyle]="{'background-image':'url(' + getImagesUrl() + activePage.frontPageItems[3].itemPromoImage + ')'}">
+                    <div class="smallbox-text">{{activePage.frontPageItems[3].itemName}}</div>
+                </div>
+           
+            <redeem-voucher-component [localization]="activePage.localization"></redeem-voucher-component> 
+ </div>
