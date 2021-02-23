@@ -135,9 +135,7 @@
     }
 }
 
-
-/* Above is unused scroll down to r63b-catalog */
-
+/* old nitro catalog ending */
 .nitro-catalog-confirm-purchase-component {
     position: absolute;
     width: 300px;
@@ -219,7 +217,21 @@
 }
 
 
-<<<<<<< HEAD
+.nitro-catalog-layout-vip-gifts-component {
+
+    .gift-item {
+        .gift-image {
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+
+        }
+    }
+}
+
+
+
+
 /* r63b catalog stylesheets */
 
 .r63b-catalog {
