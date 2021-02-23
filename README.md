@@ -3,7 +3,7 @@
 
 ## This is not the official repository for The Nitro HTML5 Client. 
 This repository will get updates from the original Repo<br>
-<b>Notice:</b> There is not stable release out there, use the Dev Branch!
+<b>Notice:</b> There is no stable release out there, use the fucking dev branch!
 
 **Usefull Links:**<br>
  [Official Repo](https://git.krews.org/nitro/nitro-client)<br>
