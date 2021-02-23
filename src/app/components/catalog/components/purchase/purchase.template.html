@@ -41,13 +41,13 @@
     <div class="pricebox" [ngClass]="[ ((vertical || quantityEnabled) ? '': '') ]">
         <div class="costbox" *ngIf="costPoints">
             <p *ngIf="costCredits" class="plusprice">+</p>
-            <p class="costsvalue">{{ costPoints }}</p>
-            <div class="iconimage" style="margin-left: 3px;">
+            <p class="costsvalue" style="padding-right: 2px;">{{ costPoints }}</p>
+            <div class="iconimage" style="margin-left: 3px;margin-top: 3px;">
             <i class="icon icon-currencybig-{{ pointsType }}"></i>
             </div>
         </div>
         <div class="costbox" *ngIf="costCredits">
-            <p class="costsvalue" style="padding-right: 2px;">{{ costCredits }}</p>
+            <p class="costsvalue" style="padding-right: 4px;">{{ costCredits }}</p>
             <div class="iconimage" style="margin-top: 3px;margin-left: 11px;margin-right: 2px;">
             <i class="icon icon-currencybig--1"></i>
             </div>        
