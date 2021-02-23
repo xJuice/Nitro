@@ -232,7 +232,7 @@
 
 
 
-/* catalog confirm purchase stylesheets */
+/* catalog confirm purchase stylesheets, contains furniname, quantity, furni preview, price, buy and cancel */
 .nitro-catalog-confirm-purchase-component {
     width: 323px;
     height: auto;
@@ -308,6 +308,7 @@
             left: 10px;
             float: left;
         }
+
         .furniname {
             padding-top: 39px;
             font-weight: 700;
@@ -335,7 +336,7 @@
             margin-top: 10px;
         }
 
-        /* price */
+        /* pricesection */
         .pricebox {
             float: left;
             position: relative;
@@ -379,7 +380,7 @@
         
         }
     
-        /* contains button, cancel */
+        /* buy and cancel section */
         .buybox, .cancelbox {
             position: absolute;
             font-size: 14px;
