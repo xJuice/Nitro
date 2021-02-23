@@ -27,11 +27,19 @@
 <nitro-catalog-customize-gift-component *ngIf="giftOffer !== null && showGiftConfigurator"></nitro-catalog-customize-gift-component>-->
 
 
-<div *ngIf="visible" [bringToTop] [draggable] class="r63b-catalog">
 
-<div class="headerctlg drag-handler">
-    <p class="titlectlg">Shop</p>
-    <div class="closectlg" (click)="hide()"></div>
+
+
+
+
+
+
+
+<div *ngIf="visible" [bringToTop] [draggable] class="nitro-catalog">
+
+<div class="header drag-handler">
+    <p class="title">Shop</p>
+    <div class="close-button" (click)="hide()"></div>
 </div>
 
 <div class="body">
@@ -60,8 +68,8 @@
     </div>
 
 </div>
+</div>
 <nitro-catalog-confirm-purchase-component *ngIf="(purchaseOffer !== null || giftOffer !== null) && !showGiftConfigurator" [giftOffer]="giftOffer" [page]="purchaseOfferPage" [offer]="purchaseOffer" [quantity]="purchaseOfferQuantity" [extra]="purchaseOfferExtra" [completed]="purchaseCompleted"></nitro-catalog-confirm-purchase-component>
 <nitro-catalog-confirm-vip-subscription-component *ngIf="purchaseVipSubscription !== null" [subscription]="purchaseVipSubscription"></nitro-catalog-confirm-vip-subscription-component>
 <nitro-catalog-confirm-purchase-insufficient-funds *ngIf="showInsufficientFunds"></nitro-catalog-confirm-purchase-insufficient-funds>
 <nitro-catalog-customize-gift-component *ngIf="giftOffer !== null && showGiftConfigurator"></nitro-catalog-customize-gift-component>
-</div>
