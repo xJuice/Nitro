@@ -1,9 +1,8 @@
-
-    <div class="nav-item">
+<div class="nav-item">
         <li class="new-nav new-nav-listitem" [ngClass]="{ 'new-nav-active': isActive }" (click)="selectPage()">
             <div class="new-nav-pagebox">
                 <div class="new-nav-icon">
-                    <img class="icon" [src]="iconUrl" />
+                    <img class="icon" [src]="iconUrl" image-placeholder />
                 </div>
                 <p class="new-nav-pagename">{{ catalogPage.localization }}</p>
                 <i *ngIf="catalogPage.children && catalogPage.children.length"  [ngClass]="{ 'new-nav-notToggled': !isToggled, 'new-nav-Toggled': isToggled }"></i>
@@ -12,5 +11,4 @@
 
         </li>
         <nitro-catalog-navigation-set-component *ngIf="isToggled && catalogPage.children && (catalogPage.children.length > 0)" [catalogPage]="catalogPage"></nitro-catalog-navigation-set-component>
-    </div>
-    
+</div>
