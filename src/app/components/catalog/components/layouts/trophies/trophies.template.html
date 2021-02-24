@@ -1,4 +1,4 @@
-<div class="w-100 h-100 nitro-catalog-layout-trophies-component">
+<!--<div class="w-100 h-100 nitro-catalog-layout-trophies-component">
     <div class="d-flex flex-column">
         <p class="small" *ngFor="let text of textPages;" [innerHtml]="text"></p>
         <div class="w-100 bg-secondary rounded nitro-catalog-layout-trophies-selector row mx-0 py-2 mb-2">
@@ -34,6 +34,43 @@
             <div class="d-flex flex-row">
                 <button type="button" class="btn btn-success btn-sm" (click)="buyCurrentItem()">{{'buy' |
                     translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="trophies_layout">
+    <div class="trophies_header">
+        <p class="text" *ngFor="let text of textPages;" [innerHtml]="text"></p>
+    </div>
+    <div class="furnipreview">
+        <div class="previous-button" (click)="handleButton('previous')"><</div>
+        <div class="furniimage">
+            <img class="align-self-center" [src]="imageUrl" />
+        </div>
+        <div class="next-button" (click)="handleButton('next')">></div>
+        <div class="pricebox credits">
+            <div class="costbox">
+                <p class="costsvalue" *ngIf="currentTrophyOffer.priceCredits">{{ currentTrophyOffer.priceCredits }}</p>
+                <div class="iconimage">
+                    <i class="icon icon-currencybig--1" style="margin-left: 5px;margin-top: 3px;"></i>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="selectbox nitro-catalog-layout-trophies-types">
+        <div class="color-select" style="background: #c19d31;" [ngClass]="'color-gold' + getActiveClass('g')" (click)="handleTrophyColor('g')"></div>
+        <div class="color-select" style="background: #a5a4a2;" [ngClass]="'color-silver' + getActiveClass('s')" (click)="handleTrophyColor('s')"></div>
+        <div class="color-select" style="background: #865600;" [ngClass]="'color-bronze' + getActiveClass('b')" (click)="handleTrophyColor('b')"></div>
+    </div>
+    <textarea autofocus name="trophie" class="textbox" maxlength="300" [(ngModel)]="enteredText">{{ enteredText }}</textarea>
+    <div class="purchase-component">
+        <div class="purchasebox">
+            <div class="giftbutton">
+                <p class="giftbuttontext">{{ ('catalog.purchase_confirmation.gift') | translate }}</p>
+            </div>
+            <div class="buybutton" (click)="buyCurrentItem()">
+                <p class="buybuttontext">{{'buy' | translate}}</p>
             </div>
         </div>
     </div>

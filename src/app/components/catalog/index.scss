@@ -960,164 +960,290 @@
                         padding-top: 40px;
                         font-weight: 700;
                     }
+                }   
+            }
+
+           /* trophies layout */
+            .trophies_layout {
+
+                .trophies_header {
+                    width: 100%;
+                    height: 150px;
                 }
-                .gift-box, .purchase-box {
+                p.text {
+                    font-size: 13px;
+                    font-family: system-ui;
+                    line-height: 15px;
+                }
+                .furnipreview {
+                    width: 100%;
+                    height: 135px;
+                    position: relative;
+                }
+                .previous-button, .next-button {
+                    width: 30px;
+                    height: 30px;
+                    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+                    box-shadow: inset 0 0 0 2px #d9d9d9;
+                    border-radius: 4px;
+                    border: solid #000;
+                    border-width: 2px 2px 3px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    position: absolute;
+                    bottom: 10px;
+                    font-weight: 1000;
+                }
+                .furniimage {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .previous-button {
+                    float: left;
+                    left: 100px;
+                    padding-left: 8px;
+                }
+                
+                .next-button {
+                    float: right;
+                    right: 100px;
+                    padding-left: 9px;
+                }
+                
+                
+                
+                .pricebox {
+                    width: auto;
+                    height: 26px;
+                    background: #bab8b4;
+                    box-shadow: inset 0 0 0 2px #fff;
+                    border: solid #000;
+                    border-width: 1px 1px 2px;
+                    border-radius: 6px;
+                    position: absolute;
+                    float: right;
+                    right: 6px;
+                    bottom: 6px;
+                    padding-left: 6px;
+                    padding-right: 3px;
+                    box-sizing: initial;
+                }
+                .credits {
+                    background: #a58d57;
+                    box-shadow: inset 0 0 0 2px #e3c47c;
+                    right: 0;
+                    bottom: 5px;
+                }
+                .costbox {
+                    height: 26px;
+                    float: left;
+                    margin-right: 5px;
+                }
+                .costsvalue {
+                    float: left;
+                    width: auto;
+                    height: 26px;
+                    line-height: 26px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #000;
+                    font-family: system-ui;
+                }
+                .iconimage {
+                    width: 20px;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .selectbox, .textbox {
+                    width: 360px;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                }
+                
+                .selectbox {
+                    height: 40px;
+                    background-image: url(^assets/images/catalog/trophies-selectbox.png);
+                }
+                .color-select {
+                    width: 40px;
+                    height: 32px;
+                    border: 1px solid #000;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin: 3px -3px 3px 5px;
+                    box-shadow: inset 0 0 0 2px #fff;
+                    cursor: pointer;
+                    float: left;
+                }
+                .textbox {
+                    height: 83px;
+                    background-image: url(^assets/images/catalog/trophies-textbox.png);
+                    margin-top: 15px;
+                    border: 0 solid #fff;
+                    resize: none;
+                    outline: 0;
+                    font-size: 12px;
+                    font-family: system-ui;
+                    padding: 5px;
+                    z-index: 10;
+                }
+            }
+
+            /* the buy & buy as gift section on the rightside of the catalog */
+            .purchase-component {
+               
+                .purchasebox {
+                margin: 5px 0;
+                width: 360px;
+                height: 65px;
+                overflow: hidden;
+                background: #ebe9df;
+                z-index: 1;
+                }
+
+                .giftbutton, .purchasebox {
                     float: left;
                     position: absolute;
                     bottom: 0;
+                } 
+
+                .quantitybox {
+                    width: 170px;
+                    float: left;
+                    bottom: 29px;
+                    position: absolute;
+                    height: 26px;
                 }
 
-                .purchase-box {
-                    margin: 5px 0;
-                    width: 360px;
-                    height: 65px;
-                    overflow: hidden;
-                    background: #ebe9df;
-                    z-index: 1;
+                .quantityinput {
+                    width: 30px;
+                    height: 25px;
+                    background: hsla(0,0%,100%,0);
+                    border: 0 solid rgba(93,93,90,0);
+                    float: left;
+                    background-image: url(^assets/images/catalog/quantitybox.png);
+                    outline: 0;
+                    padding-left: 4px;
+                    font-size: 12px;
+                }
 
-                    .giftbutton, .purchasebox {
-                        float: left;
-                        position: absolute;
-                        bottom: 0;
-                    }
-                    
-                    .purchasebox {
-                        margin: 5px 0;
-                        width: 360px;
-                        height: 65px;
-                        overflow: hidden;
-                        background: #ebe9df;
-                        z-index: 1;
-                    }
-                    .quantitybox {
-                        width: 170px;
-                        float: left;
-                        bottom: 29px;
-                        position: absolute;
-                        height: 26px;
-                    }
-                    
-                    
-                    .quantityinput {
-                        width: 30px;
-                        height: 25px;
-                        background: hsla(0,0%,100%,0);
-                        border: 0 solid rgba(93,93,90,0);
-                        float: left;
-                        background-image: url(^assets/images/catalog/quantitybox.png);
-                        outline: 0;
-                        padding-left: 4px;
-                        font-size: 12px;
-                    }
-                    
-                    .quantitytext {
-                        float: left;
-                        width: 65px;
-                        font-size: 14px;
-                        color: #727272;
-                        padding: 2px 0;
-                        font-family: system-ui;
-                    }
-                    
-                    .pricebox {
-                        width: 170px;
-                        float: right;
-                        bottom: 29px;
-                        position: absolute;
-                        right: 0px;
-                    }
-                    
-                    .pricetext {
-                        float: left;
-                        width: 65px;
-                        font-size: 14px;
-                        color: #727272;
-                        padding: 2px 0;
-                        font-family: system-ui;
-                    }
-                    
-                    .costbox {
-                        height: 26px;
-                        float: right;
-                        padding-left: 2px;
-                    }
-                    
-                    .plusprice {
-                        float: left;
-                        width: auto;
-                        height: 26px;
-                        line-height: 25px;
-                        font-weight: 1000;
-                        font-size: 14px;
-                        color: #000;
-                        letter-spacing: 2px;
-                        font-family: system-ui;
-                    }
-                    .buybutton {
-                        width: 166px;
-                        height: 20px;
-                        background: linear-gradient(#00a100 50%,#009000 0);
-                        box-shadow: inset 0 0 0 2px #009000;
-                        border-radius: 4px;
-                        border: solid #000;
-                        border-width: 2px 2px 3px;
-                        float: right;
-                        right: 0;
-                        box-sizing: initial;
-                        bottom: 0;
-                        position: absolute;
-                        cursor: pointer;
-                    }
-                    .buybutton:hover {
-                        background: linear-gradient(#00a900 50%,#009c00 0);
-                        box-shadow: inset 0 0 0 2px #009c00;
-                    }
-                    .buybuttontext, .giftbuttontext {
-                        text-align: center;
-                        font-size: 13px;
-                    }
-                    .buybuttontext {
-                        color: #fff;
-                        font-weight: 700;
-                        font-family: system-ui;
-                    }
-                    .giftbutton {
-                        width: 168px;
-                        height: 21px;
-                        background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
-                        box-shadow: inset 0 0 0 2px #d9d9d9;
-                        border-radius: 4px;
-                        border: solid #000;
-                        border-width: 1px 1px 2px;
-                        box-sizing: initial;
-                        font-family: system-ui;
-                    }
-                    .giftbutton:hover {
-                        background: linear-gradient(#fff 50%,#eee 0);
-                        box-shadow: inset 0 0 0 2px #eee;
-                    }
-                    .costsvalue {
-                        float: left;
-                        width: auto;
-                        height: 26px;
-                        line-height: 26px;
-                        font-weight: 700;
-                        font-size: 14px;
-                        color: #000;
-                        font-family: system-ui;
-                    }
-                    .iconimage {
-                        width: 20px;
-                        background-position: 50%;
-                        background-repeat: no-repeat;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                } 
+                .quantitytext {
+                    float: left;
+                    width: 65px;
+                    font-size: 14px;
+                    color: #727272;
+                    padding: 2px 0;
+                    font-family: system-ui;
+                }
+
+                .pricebox {
+                    width: 170px;
+                    float: right;
+                    bottom: 29px;
+                    position: absolute;
+                    right: 0px;
+                }
+                
+                .pricetext {
+                    float: left;
+                    width: 65px;
+                    font-size: 14px;
+                    color: #727272;
+                    padding: 2px 0;
+                    font-family: system-ui;
+                }
+                
+                .costbox {
+                    height: 26px;
+                    float: right;
+                    padding-left: 2px;
+                }
+                
+                .plusprice {
+                    float: left;
+                    width: auto;
+                    height: 26px;
+                    line-height: 25px;
+                    font-weight: 1000;
+                    font-size: 14px;
+                    color: #000;
+                    letter-spacing: 2px;
+                    font-family: system-ui;
+                }
+                .buybutton {
+                    width: 166px;
+                    height: 20px;
+                    background: linear-gradient(#00a100 50%,#009000 0);
+                    box-shadow: inset 0 0 0 2px #009000;
+                    border-radius: 4px;
+                    border: solid #000;
+                    border-width: 2px 2px 3px;
+                    float: right;
+                    right: 0;
+                    box-sizing: initial;
+                    bottom: 0;
+                    position: absolute;
+                    cursor: pointer;
+                }
+                .buybutton:hover {
+                    background: linear-gradient(#00a900 50%,#009c00 0);
+                    box-shadow: inset 0 0 0 2px #009c00;
+                }
+                .buybuttontext, .giftbuttontext {
+                    text-align: center;
+                    font-size: 13px;
+                }
+                .buybuttontext {
+                    color: #fff;
+                    font-weight: 700;
+                    font-family: system-ui;
+                }
+                .giftbutton {
+                    width: 168px;
+                    height: 21px;
+                    background: linear-gradient(#f3f3f3 50%,#d9d9d9 0);
+                    box-shadow: inset 0 0 0 2px #d9d9d9;
+                    border-radius: 4px;
+                    border: solid #000;
+                    border-width: 1px 1px 2px;
+                    box-sizing: initial;
+                    font-family: system-ui;
+                }
+                .giftbutton:hover {
+                    background: linear-gradient(#fff 50%,#eee 0);
+                    box-shadow: inset 0 0 0 2px #eee;
+                }
+                .costsvalue {
+                    float: left;
+                    width: auto;
+                    height: 26px;
+                    line-height: 26px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #000;
+                    font-family: system-ui;
+                }
+                .iconimage {
+                    width: 20px;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
+        /*end of the right section of the catalog */
 
         /* leftside from the catalog it handles navigationlist and searching (it is messy i know) */
         .leftside {
@@ -1310,13 +1436,6 @@
             left: 140px;
             z-index: 1;
             }
-
-
         }
-
-
     }
-
-
-
 }

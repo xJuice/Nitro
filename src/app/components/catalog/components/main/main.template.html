@@ -42,32 +42,31 @@
     <div class="close-button" (click)="hide()"></div>
 </div>
 
-<div class="body">
-    
-    <div *ngIf="catalogRoot && (catalogRoot.children.length > 0)" class="menu">
-        <ng-container *ngFor="let child of catalogRoot.children">
-            <div class="menu-button" [ngClass]="{ 'menu-button-active': (activeTab === child) }"  (click)="selectTab(child)">{{ child.localization }}</div>
-        </ng-container>
-    </div>
-
-    <div class="info">
-        <div class="image" [ngStyle]="{ 'background-image': 'url(' + headerImageUrl + ')' }"></div>
-        <div class="icon" [ngStyle]="{ 'background-image': 'url(' + iconUrl + ')' }"></div>
-        <p class="caption">{{ activePageData?.localization }}</p>
-        <p class="text">{{ activePage?.localization?.texts[0] }}</p>
-    </div>
-
-    <div class="lowerbody">
-        <div class="leftside" *ngIf="activeTab && (activeTab.children.length > 0)">
-            <div class="search-bgbox"><input placeholder="{{ ('catalog.search') | translate }}" class="search"></div>
-            <div nitro-catalog-navigation-component></div>
+    <div class="body">
+        
+        <div *ngIf="catalogRoot && (catalogRoot.children.length > 0)" class="menu">
+            <ng-container *ngFor="let child of catalogRoot.children">
+                <div class="menu-button" [ngClass]="{ 'menu-button-active': (activeTab === child) }"  (click)="selectTab(child)">{{ child.localization }}</div>
+            </ng-container>
         </div>
-        <div class="rightside">
-            <ng-template #layoutsContainer></ng-template>
+
+        <div class="info">
+            <div class="image" [ngStyle]="{ 'background-image': 'url(' + headerImageUrl + ')' }"></div>
+            <div class="icon" [ngStyle]="{ 'background-image': 'url(' + iconUrl + ')' }"></div>
+            <p class="caption">{{ activePageData?.localization }}</p>
+            <p class="text">{{ activePage?.localization?.texts[0] }}</p>
+        </div>
+
+        <div class="lowerbody">
+            <div class="leftside" *ngIf="activeTab && (activeTab.children.length > 0)">
+                <div class="search-bgbox"><input placeholder="{{ ('catalog.search') | translate }}" class="search"></div>
+                <div nitro-catalog-navigation-component></div>
+            </div>
+            <div class="rightside">
+                <ng-template #layoutsContainer></ng-template>
+            </div>
         </div>
     </div>
-
-</div>
 </div>
 <nitro-catalog-confirm-purchase-component *ngIf="(purchaseOffer !== null || giftOffer !== null) && !showGiftConfigurator" [giftOffer]="giftOffer" [page]="purchaseOfferPage" [offer]="purchaseOffer" [quantity]="purchaseOfferQuantity" [extra]="purchaseOfferExtra" [completed]="purchaseCompleted"></nitro-catalog-confirm-purchase-component>
 <nitro-catalog-confirm-vip-subscription-component *ngIf="purchaseVipSubscription !== null" [subscription]="purchaseVipSubscription"></nitro-catalog-confirm-vip-subscription-component>

@@ -63,10 +63,9 @@
         </div>
 
 
-        <div *ngIf="activeOffer" class="purchase-box">
+        <div *ngIf="activeOffer" class="purchase-component">
         <div nitro-catalog-purchase-component [activePage]="activePage" [activeOffer]="activeOffer" [quantityEnabled]="activeOffer.bundlePurchaseAllowed"></div>
         </div>
     
         
 </div>
-
