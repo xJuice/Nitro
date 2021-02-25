@@ -620,7 +620,7 @@
 
         }
         
-        /* right element from the catalog it handles all layouts components like frontpage4, default 3x3 , spaces, trophy etc. */
+        /* right contains all components on the right side of the catalog like: purchase-component, layout-components(new_spaces,trophies etc.), furnibox */
         .rightside {
             width: 360px;
             height: 460px;
@@ -740,229 +740,301 @@
                 }
             }
 
-            /* default_3x3 layout */
-            .default_3x3_layout {
+            /* furnipreview display */
+            .display-box {
+                width: 360px;
+                height: 240px;
+                background: #000;
+                overflow: hidden;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                transition: .5s;
+                position: relative;
+            }
+            /* name of the furni on the display (top) */
+            .furni-name {
+                position: absolute;
+                color: #fff;
+                z-index: 1111;
+                left: 0;
+                top: 0;
+                background: rgba(0,0,0,.058823529411764705);
+                border-radius: 5px;
+                padding: 4px 6px;
+                margin: 20px 15px;
+                font-size: 13px;
+                font-family: Ubuntu;
+                text-shadow: 1px 1px 0 rgb(0 0 0 / 30%);
+            } 
 
-                .display-box {
-                    width: 360px;
-                    height: 240px;
-                    background: #000;
-                    overflow: hidden;
-                    background-position: 50%;
-                    background-repeat: no-repeat;
-                    cursor: pointer;
-                    transition: .5s;
-                    position: relative;
-                }
-                .furni-name {
-                    position: absolute;
-                    color: #fff;
-                    z-index: 1111;
-                    left: 0;
-                    top: 0;
-                    background: rgba(0,0,0,.058823529411764705);
-                    border-radius: 5px;
-                    padding: 4px 6px;
-                    margin: 20px 15px;
+            /* select furni , that thing on the bottom of the layout */
+            .select-furni {
+                position: absolute;
+                width: 360px;
+                height: 65px;
+                background-image: url(^assets/images/catalog/not-selected-box.png);
+                bottom: 8px;
+            
+                .text {
+                    width: 100%;
+                    text-align: center;
                     font-size: 13px;
-                    font-family: Ubuntu;
-                    text-shadow: 1px 1px 0 rgb(0 0 0 / 30%);
+                    color: #6f6f6f;
+                    font-family: system-ui;
+                    padding-top: 40px;
+                    font-weight: 700;
                 }
-                /* furnilist part (it is messy i know) */
-                .furnibox {
-                    margin: 5px 0;
-                    width: 352px;
-                    height: 147px;
-                    background-image: url(^assets/images/catalog/furni-box.png);
-                    float: left;
-                    padding: 4px;
-                    overflow: hidden;
-                    position: absolute;
-                    box-sizing: initial;
-                    
-
-                    /* r63b scrollbar works only for webkit browsers */
-                    .furnilist::-webkit-scrollbar {
-                        width: 16px;
-                        box-sizing: border-box
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png)
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button:hover {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right -16px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button:active {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right 0
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png)
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right -16px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:active {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right 0
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-thumb {
-                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -18px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-thumb,.furnilist::-webkit-scrollbar-thumb:hover {
-                        box-shadow: inset 0 0 1px 2px #fff;
-                        border-radius: 4px;
-                        border: solid #000;
-                        border-width: 1px 1px 2px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-thumb:hover {
-                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -8px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-thumb:active {
-                        border: 1px solid #000;
-                        box-shadow: inset 0 0 1px 2px #828282;
-                        background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right 2px;
-                        border-radius: 4px
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-track-piece {
-                        background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-track-piece.png) no-repeat 50%
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-corner {
-                        background: #d0cecb
-                    }
-                    
-                    .furnilist::-webkit-scrollbar-track-piece {
-                        background-color: #d9d9d9;
-                        box-shadow: inset 1px 1px 1px rgba(0,0,0,.2)
-                    }
-                    
-                    .furnilist {
-                        width: 352px;
-                        height: 95%;
-                        list-style: none;
-                        overflow: auto;
-                        position: absolute;    
-                    }
-                    /* list view it shows all furnitures */
-                    .furnilistview {
-                        width: 55px;
-                        height: 74px;
-                        float: left;
-                        position: relative;
-
-                        /* when the furni is selected */
-                        .furni-active {
-                            background: #fff;
-                            box-shadow: inset 0 0 0 2px #62c4e8;
-                            border-radius: 4px;
-                        }
-                        /* single furni */
-                        .furni {
-                            width: 53px;
-                            max-height: 74px;
-                            height: auto;
-                            float: left;
-                            padding-bottom: 6px;
-                            cursor: pointer;
-                            overflow: hidden;
-                            position: relative;
-                            margin-left: 3px;
-                        
-                            /* credits price box */
-                            .second-price-box {
-                                margin-top: 3px;
-                            }
-                             /* price box for points and credits */
-                            .first-price-box, .second-price-box {
-                                width: 49px;
-                                height: 11px;
-                            }
-
-                            .multiple-purchase-indicators {
-                                width: auto;
-                                height: 8px;
-                                max-width: 30px;
-                                padding: 2px 3px;
-                                background: #ff3200;
-                                float: right;
-                                overflow: hidden;
-                                position: relative;
-                                top: 24px;
-                                font-size: 10px;
-                                line-height: 8px;
-                                color: #cc6;
-                                border-radius: 5px;
-                                right: 5px;
-                                font-family: Arial;
-                                text-shadow: 1px 1px 0 rgb(0 0 0 / 35%);
-                                box-sizing: initial;
-                            }
-        
-                            .furni-image {
-                                width: 53px;
-                                height: 39px;
-                                background-position: 50%;
-                                background-repeat: no-repeat;
-                            }
-        
-                            .price-caption {
-                                font-size: 11px;
-                                height: 11px;
-                                line-height: 11.5px;
-                                font-weight: 700;
-                                width: 100%;
-                                position: absolute;
-                                text-align: right;
-                                text-shadow: 0 -1px 0 rgb(0 0 0 / 35%);
-                                overflow: hidden;
-                                font-family: system-ui;
-                                float: right;
-                                right: 18px;
-                            }
-        
-                            .price-icon {
-                                width: 11px;
-                                height: 11px;
-                                float: right;
-                                right: 3px;
-                                top: -6px;
-                                position: relative;
-                            }
-                        }   
-                    }
-                }
-               
-
-                /* select furni , that thing on the bottom of the layout */
-                .select_furni {
-                    position: absolute;
-                    width: 360px;
-                    height: 65px;
-                    background-image: url(^assets/images/catalog/not-selected-box.png);
-                    bottom: 8px;
-                
-                    .text {
-                        width: 100%;
-                        text-align: center;
-                        font-size: 13px;
-                        color: #6f6f6f;
-                        font-family: system-ui;
-                        padding-top: 40px;
-                        font-weight: 700;
-                    }
-                }   
             }
 
+
+             /* furnibox part */
+            .furni-box {
+                margin: 5px 0;
+                width: 352px;
+                height: 147px;
+                background-image: url(^assets/images/catalog/furni-box.png);
+                float: left;
+                padding: 4px;
+                overflow: hidden;
+                position: absolute;
+                box-sizing: initial;
+                
+
+                /* r63b scrollbar works only for webkit browsers */
+                .furnilist::-webkit-scrollbar {
+                    width: 16px;
+                    box-sizing: border-box
+                }
+                
+                .furnilist::-webkit-scrollbar-button {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png)
+                }
+                
+                .furnilist::-webkit-scrollbar-button:hover {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right -16px
+                }
+                
+                .furnilist::-webkit-scrollbar-button:active {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button.png) no-repeat center right 0
+                }
+                
+                .furnilist::-webkit-scrollbar-button:single-button:vertical:increment {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png)
+                }
+                
+                .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right -16px
+                }
+                
+                .furnilist::-webkit-scrollbar-button:single-button:vertical:increment:active {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-button2.png) no-repeat center right 0
+                }
+                
+                .furnilist::-webkit-scrollbar-thumb {
+                    background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -18px
+                }
+                
+                .furnilist::-webkit-scrollbar-thumb,.furnilist::-webkit-scrollbar-thumb:hover {
+                    box-shadow: inset 0 0 1px 2px #fff;
+                    border-radius: 4px;
+                    border: solid #000;
+                    border-width: 1px 1px 2px
+                }
+                
+                .furnilist::-webkit-scrollbar-thumb:hover {
+                    background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right -8px
+                }
+                
+                .furnilist::-webkit-scrollbar-thumb:active {
+                    border: 1px solid #000;
+                    box-shadow: inset 0 0 1px 2px #828282;
+                    background: #fff url(^assets/images/scrollbar-thumb.png) no-repeat center right 2px;
+                    border-radius: 4px
+                }
+                
+                .furnilist::-webkit-scrollbar-track-piece {
+                    background: hsla(0,0%,100%,0) url(^assets/images/scrollbar-track-piece.png) no-repeat 50%
+                }
+                
+                .furnilist::-webkit-scrollbar-corner {
+                    background: #d0cecb
+                }
+                
+                .furnilist::-webkit-scrollbar-track-piece {
+                    background-color: #d9d9d9;
+                    box-shadow: inset 1px 1px 1px rgba(0,0,0,.2)
+                }
+                
+                .furnilist {
+                    width: 352px;
+                    height: 95%;
+                    list-style: none;
+                    overflow: auto;
+                    position: absolute;    
+                }
+                
+                /* list view it shows all furnitures */
+                .furnilistview {
+                    width: 55px;
+                    height: 74px;
+                    float: left;
+                    position: relative;
+
+                    /* when the furni is selected */
+                    .furni-active {
+                        background: #fff;
+                        box-shadow: inset 0 0 0 2px #62c4e8;
+                        border-radius: 4px;
+                    }
+                    /* single furni */
+                    .furni {
+                        width: 53px;
+                        max-height: 74px;
+                        height: auto;
+                        float: left;
+                        padding-bottom: 6px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        position: relative;
+                        margin-left: 3px;
+                    
+                        /* credits price box */
+                        .second-price-box {
+                            margin-top: 3px;
+                        }
+                         /* price box for points and credits */
+                        .first-price-box, .second-price-box {
+                            width: 49px;
+                            height: 11px;
+                        }
+
+                        .multiple-purchase-indicators {
+                            width: auto;
+                            height: 8px;
+                            max-width: 30px;
+                            padding: 2px 3px;
+                            background: #ff3200;
+                            float: right;
+                            overflow: hidden;
+                            position: relative;
+                            top: 24px;
+                            font-size: 10px;
+                            line-height: 8px;
+                            color: #cc6;
+                            border-radius: 5px;
+                            right: 5px;
+                            font-family: Arial;
+                            text-shadow: 1px 1px 0 rgb(0 0 0 / 35%);
+                            box-sizing: initial;
+                        }
+    
+                        .furni-image {
+                            width: 53px;
+                            height: 39px;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                        }
+    
+                        .price-caption {
+                            font-size: 11px;
+                            height: 11px;
+                            line-height: 11.5px;
+                            font-weight: 700;
+                            width: 100%;
+                            position: absolute;
+                            text-align: right;
+                            text-shadow: 0 -1px 0 rgb(0 0 0 / 35%);
+                            overflow: hidden;
+                            font-family: system-ui;
+                            float: right;
+                            right: 18px;
+                        }
+    
+                        .price-icon {
+                            width: 11px;
+                            height: 11px;
+                            float: right;
+                            right: 3px;
+                            top: -6px;
+                            position: relative;
+                        }
+                    }   
+                }
+            }
+
+
+            /* spaces layout */
+            .spaces_new_layout {
+
+                .spaces-select-menu {
+                    height: 30px;
+                    overflow: hidden;
+                    width: 100%;
+                    margin-top: -29px;
+                    z-index: 111111;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .ssm-left {
+                    width: auto;
+                    height: 21px;
+                    border: solid 1px #000;
+                    box-sizing: border-box;
+                    background: #fff;
+                    box-shadow: inset -1px -1px 0px 0px #cccccc;
+                    border-radius: 3px 0px 0px 3px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-size: 11.5px;
+                    font-family: system-ui;
+                    font-weight: bold;
+                    outline: 0;
+                }
+                
+                .ssm-middle {
+                    width: auto;
+                    height: 21px;
+                    border: solid 1px #000;
+                    box-sizing: border-box;
+                    background: #fff;
+                    box-shadow: inset -1px -1px 0px 0px #cccccc;
+                    margin-left: -1px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-size: 11.5px;
+                    font-family: system-ui;
+                    font-weight: bold;
+                    outline: 0;
+                }
+                
+                .ssm-right {
+                    width: auto;
+                    height: 21px;
+                    border: solid 1px #000;
+                    box-sizing: border-box;
+                    background: #fff;
+                    box-shadow: inset -1px -1px 0px 0px #cccccc;
+                    border-radius: 0px 3px 3px 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    margin-left: -1px;
+                    font-size: 11.5px;
+                    font-family: system-ui;
+                    font-weight: bold;
+                    outline: 0;
+                }
+                
+                .selectspaces-active {
+                    background: #989898;
+                    box-shadow: inset 1px 1px 0px 0px #535353;
+                    color:white;
+                }
+
+            }
            /* trophies layout */
             .trophies_layout {
 
@@ -1013,9 +1085,7 @@
                     right: 100px;
                     padding-left: 9px;
                 }
-                
-                
-                
+                     
                 .pricebox {
                     width: auto;
                     height: 26px;
@@ -1098,7 +1168,7 @@
                 }
             }
 
-            /* the buy & buy as gift section on the rightside of the catalog */
+            /* the buy & buy as gift section on the rightside of the catalog (bottom) */
             .purchase-component {
                
                 .purchasebox {

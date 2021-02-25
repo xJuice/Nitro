@@ -27,45 +27,42 @@
 
 <div class="default_3x3_layout">
     <div *ngIf="!activeOffer" class="d-flex flex-column justify-content-center align-items-center position-relative w-100 flex-grow-1" style="height: 240px;">
-        <img *ngIf="getImage(1)" [src]="getImage(1)" />
+        <img *ngIf="getImage(1)" [src]="getImage(1)" image-placeholder />
     </div>
     <div *ngIf="activeOffer" class="d-flex flex-column justify-content-center align-items-center position-relative w-100 flex-grow-1" style="height: 240px;">
         <div class="furni-name" style="z-index:1;">{{ offerName(activeOffer) }}</div>
         <div class="display-box room-preview" nitro-room-preview-component [roomPreviewer]="roomPreviewer" [width]="360" [height]="240"></div>
     </div>
 
-        <div class="furnibox">
-            <div class="furnilist">
-                <div class="furnilistview"  *ngFor="let offer of offers" (click)="selectOffer(offer)">
+    <div class="furni-box">
+        <div class="furnilist">
+            <div class="furnilistview"  *ngFor="let offer of offers" (click)="selectOffer(offer)">
 
-                    <div class="furni" [ngClass]="{ 'furni-active': (activeOffer === offer) }">
-                        <!---->
-                        <div class="multiple-purchase-indicators count" *ngIf="(offerCount(offer) > 1)">x{{ offerCount(offer) }}</div>
-                        <div class="furni-image detail-image" [ngStyle]="{ 'background-image': 'url(' + offerImage(offer) + ')' }"></div>
+                <div class="furni" [ngClass]="{ 'furni-active': (activeOffer === offer) }">
+                    <!---->
+                    <div class="multiple-purchase-indicators count" *ngIf="(offerCount(offer) > 1)">x{{ offerCount(offer) }}</div>
+                    <div class="furni-image detail-image" [ngStyle]="{ 'background-image': 'url(' + offerImage(offer) + ')' }"></div>
                         
-                        <div *ngIf="offer.priceCredits" class="first-price-box">
-                            <p class="price-caption">{{ offer.priceCredits }}</p>
-                            <div class="price-icon"><i class="icon icon-currency--1 scale-0-75"></i></div>
-                        </div>
+                    <div *ngIf="offer.priceCredits" class="first-price-box">
+                        <p class="price-caption">{{ offer.priceCredits }}</p>
+                        <div class="price-icon"><i class="icon icon-currency--1 scale-0-75"></i></div>
+                    </div>
                        
-                        <div *ngIf="offer.priceActivityPoints" class="second-price-box">
-                            <p class="price-caption"><i *ngIf="offer.priceCredits">+</i> {{ offer.priceActivityPoints }}</p>
-                            <div class="price-icon"><i class="icon icon-currency-{{ offer.priceActivityPointsType }} scale-0-75"></i></div>
-                        </div>
-                
+                    <div *ngIf="offer.priceActivityPoints" class="second-price-box">
+                         <p class="price-caption"><i *ngIf="offer.priceCredits">+</i> {{ offer.priceActivityPoints }}</p>
+                        <div class="price-icon"><i class="icon icon-currency-{{ offer.priceActivityPointsType }} scale-0-75"></i></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="select_furni">
-            <p class="text">{{ ('catalog.purchase.select.info') | translate }}</p>
-        </div>
+    <div class="select-furni">
+        <p class="text">{{ ('catalog.purchase.select.info') | translate }}</p>
+    </div>
 
-
-        <div *ngIf="activeOffer" class="purchase-component">
+    <div class="purchase-component" *ngIf="activeOffer">
         <div nitro-catalog-purchase-component [activePage]="activePage" [activeOffer]="activeOffer" [quantityEnabled]="activeOffer.bundlePurchaseAllowed"></div>
-        </div>
-    
+    </div>
         
 </div>
